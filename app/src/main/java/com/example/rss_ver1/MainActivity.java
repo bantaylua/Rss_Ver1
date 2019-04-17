@@ -16,8 +16,10 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
     public class MyAdapter extends BaseAdapter{
-        final int NumberOfItem = 6;
+        final int NumberOfItem = 4;
         private Bitmap[] bitmaps = new Bitmap[NumberOfItem];
+
+        Integer[] image ={R.drawable.logo_dantri, R.drawable.logo_laodong, R.drawable.logo_thanhnien, R.drawable.logo_vnexpress};
 
         private Context context;
         private LayoutInflater layoutInflater;
@@ -29,7 +31,7 @@ public class MainActivity extends Activity {
             //init dummy bitmap
             // using R.drawable.icon for all items
             for (int i = 0; i < NumberOfItem; i++){
-                bitmaps[i] = BitmapFactory.decodeResource(context.getResources(), R.drawable.icon);
+                bitmaps[i] = BitmapFactory.decodeResource(context.getResources(), image[i]);
             }
         }
         @Override
